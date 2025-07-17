@@ -158,3 +158,7 @@ If you have suggestions for improving this template, please open an issue or sub
 ## License
 
 [MIT License](LICENSE)
+
+## Latest Update
+
+Updated to implement simple hardcoded proof of contribution for Vana Satya Network integration.
