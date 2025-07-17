@@ -31,11 +31,11 @@ class Settings(BaseSettings):
     )
 
     INPUT_DIR: str = Field(
-        default="demo/input", description="Directory containing input files to process"
+        default="/input", description="Directory containing input files to process"
     )
 
     OUTPUT_DIR: str = Field(
-        default="demo/output", description="Directory where output files will be written"
+        default="/output", description="Directory where output files will be written"
     )
 
     # Google OAuth

@@ -26,6 +26,9 @@ def run() -> None:
     proof = Proof()
     proof_response = proof.generate()
 
+    # Ensure output directory exists
+    os.makedirs(settings.OUTPUT_DIR, exist_ok=True)
+    
     output_path = os.path.join(settings.OUTPUT_DIR, "results.json")
     with open(output_path, 'w') as f:
         json.dump(proof_response.model_dump(), f, indent=2)
