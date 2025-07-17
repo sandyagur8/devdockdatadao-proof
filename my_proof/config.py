@@ -6,7 +6,7 @@ from typing import Optional
 class Settings(BaseSettings):
     """Global settings configuration using environment variables"""
 
-    DLP_ID: int = Field(default=41, description="Data Liquidity Pool ID")
+    DLP_ID: int = Field(default=1234, description="Data Liquidity Pool ID")
 
     DLP_CONTRACT_ADDRESS: str = Field(
         default="0x238CA43C9aaa98bc2C5C7672dc30125c30a805db",
@@ -19,7 +19,7 @@ class Settings(BaseSettings):
     )
 
     OWNER_ADDRESS: Optional[str] = Field(
-        default=None,
+        default="0x742d35Cc6634C0532925a3b8D4C9db96C4b4d8b6",
         description="Ethereum address of the data owner",
         pattern="^0x[a-fA-F0-9]{40}$",
     )
@@ -31,16 +31,16 @@ class Settings(BaseSettings):
     )
 
     INPUT_DIR: str = Field(
-        default="/input", description="Directory containing input files to process"
+        default="demo/input", description="Directory containing input files to process"
     )
 
     OUTPUT_DIR: str = Field(
-        default="/output", description="Directory where output files will be written"
+        default="demo/output", description="Directory where output files will be written"
     )
 
     # Google OAuth
     GOOGLE_TOKEN: Optional[str] = Field(
-        default=None,
+        default="demo_token_12345_for_testing_purposes",
         description="Google OAuth2 access token for user authentication",
         min_length=20,
     )

@@ -14,7 +14,8 @@ def run() -> None:
     """Generate proofs for all input files."""
     # logging.info(f"Using config: {settings.model_dump_json(indent=2)}")
     
-    settings.DLP_ID = 142 # TODO: Set your own DLP ID here
+    # Use the DLP ID from config (hardcoded to 1234)
+    logging.info(f"Processing DLP ID: {settings.DLP_ID}")
 
     input_files_exist = os.path.isdir(settings.INPUT_DIR) and bool(os.listdir(settings.INPUT_DIR))
 
